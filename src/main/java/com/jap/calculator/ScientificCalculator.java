@@ -62,7 +62,7 @@ public class ScientificCalculator {
 		return num;
     }
 
-	public static void main(String[] args)throws Exception{
+	public static void main(String[] args){
 		ScientificCalculator scientificCalculator = new ScientificCalculator();
 		try {
 			scientificCalculator.cielOfANumber(10);
