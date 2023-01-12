@@ -38,6 +38,6 @@ public class MathematicalCalculator {
 	public int modulo(int num1, int num2)
 	{
 		int moduloo= num1%num2;
-		return-1;
+		return moduloo;
 	}
 }
