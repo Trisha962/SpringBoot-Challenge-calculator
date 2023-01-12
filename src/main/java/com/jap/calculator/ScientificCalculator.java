@@ -1,6 +1,6 @@
 
 package com.jap.calculator;
-
+import java.lang.Math;
 public class ScientificCalculator {
 
 	public double cielOfANumber(float num) throws CalculatorException
@@ -17,7 +17,7 @@ public class ScientificCalculator {
 		return num;
 	}
 	
-	public static double floorOfANumber(float num) throws CalculatorException
+	public  double floorOfANumber(float num) throws CalculatorException
 	{
 		//check if num is equal to or less than 0 than throw the userdefined exception with proper message
 		//or else call floor method of Math class and return the value
@@ -27,12 +27,12 @@ public class ScientificCalculator {
 		}
 		else
 		{
-			Math.floor(num);
+			Math.floor(2000);
 		}
 		return num;
 	}
 	
-    public static long power(int num1, int num2) throws CalculatorException {
+    public  long power(int num1, int num2) throws CalculatorException {
 		//if num1 is less than num2 than throw the userdefined exception with proper message
 		//else use Math pow method and return the value
 		if(num1<=0 && num2<=0)
@@ -62,40 +62,36 @@ public class ScientificCalculator {
 		return num;
     }
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args)throws Exception{
 		ScientificCalculator scientificCalculator = new ScientificCalculator();
-		try
-		{
+		try {
 			scientificCalculator.cielOfANumber(10);
+		} catch (CalculatorException e)
+		{
+			throw new RuntimeException(e);
+		}
+		try{
+			scientificCalculator.squareRoot(25);
+		}
+		catch(CalculatorException e)
+		{
+			throw new RuntimeException(e);
+		}
+		try {
+			scientificCalculator.power(100,1);
 		}
 		catch (CalculatorException e)
 		{
 			throw new RuntimeException(e);
 		}
-		//Call all the methods one by one and surround them by try and respective catch blocks.
-		try {
-			ScientificCalculator.floorOfANumber(23453);
+		try
+		{
+			scientificCalculator.floorOfANumber(400);
 		}
 		catch (CalculatorException e)
 		{
-			throw new Exception(e);
+			throw new RuntimeException(e);
 		}
-		try {
-			ScientificCalculator.power(100,1);
-		}
-		catch (CalculatorException e)
-		{
-			throw new Exception(e);
-		}
-		try {
-			ScientificCalculator.squareRoot(25);
-		}
-		catch (CalculatorException e)
-		{
-			throw new Exception(e);
-		}
-	}
 
-
-
+}
 }
