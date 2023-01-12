@@ -1,27 +1,42 @@
+
+
 package com.jap.calculator;
 
 public class MathematicalCalculator {
 
 	public int add(int num1, int num2)
-	{	
-		return -1;
+	{
+		int addition= num1+num2;
+		return addition;
 	}
 	public int subtract(int num1, int num2)
-	{	
-		return -2;
+	{
+		int subtract= num1-num2;
+		return subtract;
 	}
 	public int multiply(int num1, int num2)
-	{	
-		return -1;
-	}
-	public int divide(int num1, int num2)
 	{
-		//write the code and handle the ArithmeticException
-         return -1;
+		int multiply= num1*num2;
+		return multiply;
+	}
+	public int divide(int num1, int num2)throws ArithmeticException
+	{
+		int div= 0;
+		try {
+			//write logic
+			div = (num1 / num2);
+			//Handle specific exception
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
+		return div;
 
 	}
 	public int modulo(int num1, int num2)
-	{	
+	{
+		int moduloo= num1%num2;
 		return-1;
 	}
 }
