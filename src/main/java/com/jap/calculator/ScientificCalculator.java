@@ -35,7 +35,7 @@ public class ScientificCalculator {
     public  long power(int num1, int num2) throws CalculatorException {
 		//if num1 is less than num2 than throw the userdefined exception with proper message
 		//else use Math pow method and return the value
-		if(num1<=0 && num2<=0)
+		if(num1<num2)
 		{
 			throw new CalculatorException("Power not possible");
 		}

@@ -23,6 +23,7 @@ public class MathematicalCalculator {
 	{
 		int div= 0;
 		try {
+
 			//write logic
 			div = (num1 / num2);
 			//Handle specific exception
