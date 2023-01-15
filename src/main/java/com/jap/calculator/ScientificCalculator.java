@@ -2,7 +2,7 @@
 package com.jap.calculator;
 import java.lang.Math;
 public class ScientificCalculator {
-
+	//returns the smallest double value that is greater than or equal to the argument
 	public double cielOfANumber(float num) throws CalculatorException
 	{
 		//check if num is equal to or less than 0 than throw the userdefined exception with proper message
@@ -16,7 +16,7 @@ public class ScientificCalculator {
 		}
 		return num;
 	}
-	
+	// floor find the largest integer value which is less than or equal to the argument
 	public  double floorOfANumber(float num) throws CalculatorException
 	{
 		//check if num is equal to or less than 0 than throw the userdefined exception with proper message
